@@ -1,57 +1,86 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    color: #37474f;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: background-color 0.3s ease;
 }
 
 .container {
     text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 h1 {
-    color: #2c3e50;
-    margin-bottom: 10px;
+    color: #1a237e;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 p {
-    color: #666;
-    margin-bottom: 20px;
+    color: #546e7a;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 #gameArea {
     position: relative;
     width: 600px;
     height: 400px;
-    background-color: #e0f7fa;
-    border: 2px solid #0097a7;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border: none;
+    border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-#score, #timer, #highScore {
+#score, #timer, #highScore, #level {
     position: absolute;
-    top: 10px;
-    font-size: 18px;
-    font-weight: bold;
+    top: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a237e;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 #score {
-    left: 10px;
+    left: 15px;
 }
 
 #timer {
     left: 50%;
     transform: translateX(-50%);
+    background: rgba(33, 150, 243, 0.15);
 }
 
 #highScore {
-    right: 10px;
+    right: 15px;
+    background: rgba(156, 39, 176, 0.15);
+}
+
+#level {
+    top: auto;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(76, 175, 80, 0.15);
 }
 
 .bubble {
@@ -61,42 +90,100 @@ p {
     border-radius: 50%;
     cursor: pointer;
     animation: float 5s infinite ease-in-out;
+    backdrop-filter: blur(5px);
+    box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.3),
+                inset 5px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.bubble:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
 }
 
-/* Different bubble types */
+/* Different bubble types with soft gradients */
 .bubble.normal {
-    background-color: #00bcd4;
+    background: linear-gradient(135deg, #81d4fa 0%, #4fc3f7 100%);
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .bubble.fast {
-    background-color: #ff5722;
+    background: linear-gradient(135deg, #fff176 0%, #ffd54f 100%);
     animation-duration: 3s;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .bubble.exploding {
-    background-color: #f44336;
+    background: linear-gradient(135deg, #ff8a65 0%, #ff7043 100%);
     animation-duration: 7s;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .bubble.powerUp {
-    background-color: #4caf50;
+    background: linear-gradient(135deg, #aed581 0%, #9ccc65 100%);
     animation-duration: 10s;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.controls {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 #startBtn, #pauseBtn {
-    background-color: #2ecc71;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 30px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+#startBtn:hover, #pauseBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+}
+
+#startBtn:active, #pauseBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(76, 175, 80, 0.2);
+}
+
+#pauseBtn {
+    background: linear-gradient(135deg, #2196F3 0%, #1e88e5 100%);
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+#pauseBtn:hover {
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+#pauseBtn:active {
+    box-shadow: 0 2px 10px rgba(33, 150, 243, 0.2);
+}
+
+#pauseBtn:disabled {
+    background: linear-gradient(135deg, #b0bec5 0%, #90a4ae 100%);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.7;
 }
 
 #startBtn:hover, #pauseBtn:hover {
