@@ -3,10 +3,11 @@
 A **fun, interactive, and stress-busting website** designed to help users **relax, unwind, and recharge** through engaging animations, playful interactions, and soothing sound effects.
 Perfect for taking a quick break and refreshing your mind!
 
-![Stress Relief Game Preview](https://stress-relief-game.anubhavsingh.website/image/weatherimg.png)
+![Stress Relief Game Preview](https://stress-relief-game-website.vercel.app//image/weatherimg.png)
 
 ### 🌐 Live Demo
-👉 [Visit Website](https://stress-relief-game.anubhavsingh.website)
+
+👉 [Visit Website](https://stress-relief-game-website.vercel.app/)
 
 ---
 
@@ -37,7 +38,7 @@ Built with the goal of helping users **relax through creativity and play**, this
 
 ## 📸 Preview
 
-![Stress Relief Game Screenshot](https://stress-relief-game.anubhavsingh.website/image/weatherimg.png)
+![Stress Relief Game Screenshot](https://stress-relief-game-website.vercel.app//image/weatherimg.png)
 
 ---
 
@@ -45,6 +46,7 @@ Built with the goal of helping users **relax through creativity and play**, this
 
 Contributions are always welcome!
 If you’d like to add new stress-relief activities, animations, or sounds:
+
 1. Fork the repository
 2. Make your changes
 3. Submit a pull request 🚀
