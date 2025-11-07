@@ -3,7 +3,7 @@
 A **fun, interactive, and stress-busting website** designed to help users **relax, unwind, and recharge** through engaging animations, playful interactions, and soothing sound effects.
 Perfect for taking a quick break and refreshing your mind!
 
-![Stress Relief Game Preview](https://stress-relief-game-website.vercel.app//image/weatherimg.png)
+![Stress Relief Game Preview](https://stress-relief-game-website.vercel.app/image/websiteimg.png)
 
 ### 🌐 Live Demo
 
