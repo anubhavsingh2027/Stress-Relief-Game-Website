@@ -57,6 +57,7 @@ If you’d like to add new stress-relief activities, animations, or sounds:
 
 This project is licensed under the **MIT License** – free to use, share, and modify.
 
+
 ---
 
 ### 🌟 If this game helped you smile or relax, don’t forget to give it a star on GitHub!
